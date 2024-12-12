@@ -18,4 +18,5 @@ const url = "https://restcountries.com/v2/all"
 - [x] Minimal design using black and white theme.
 
 **Screenshot (GIF)**
+
 ![brave_BlEFCUyCub](https://github.com/user-attachments/assets/c2b8b7ea-6864-47db-a227-2fe9526357d1)
