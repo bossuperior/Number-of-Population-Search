@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 400px;
+}
+.title{
+    margin: 0;
+}
+.subtitle{
+    display: inline-block;
+    margin: 5px 0 20px; /*บน = 5 ,ซ้าย-ขวา = 0 ,ล่าง = 20*/
+    opacity: 0.8;
+}
+.header{
+    background: #333;
+    color: #fff;
+    padding: 30px 20px;
+}
+.header input{
+    background: rgba(0,0,0,0.2);
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+}
+.header input:focus{
+    outline: none;
+}
+.country{
+    background: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding:0 ;
+    max-height: 400px;
+    overflow-y: auto; /*ถ้ามีเนื้อหาในแนวตั้งจะมี scrollbar โผล่ขึ้นมา*/
+}
+.country li{
+    display: flex;
+    padding: 20px;
+}
+.country img{ /*มีการวน loop ใน array เพื่อสร้าง img tag ในไฟล์ app.js*/
+    border-radius: 50%;
+    object-fit: cover; /*เนื้อหาจะถูกขยายหรือย่อขนาดเพื่อเติมเต็มพื้นที่ของกล่องโดยไม่ให้มีพื้นที่ว่าง โดยรักษา ratio ไว้*/
+    width: 50px;
+    height: 50px;
+}
+.country .info{
+    margin-left: 15px ;
+}
+.country .info h4{
+    margin: 0 0 10px; /*ล่าง 10px*/
+}
+.country .info p{
+    font-size: 12px;
+}
+.country li:not(:last-of-type){ /*แต่ละ list ถ้าไม่ใช้ตัวสุดท้ายจะมีเส้นขอบด้านล่าง*/
+    border-bottom: 1px solid #eee;
+}
+.country li.hide{
+    display:none;
+}
